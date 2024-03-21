@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  server:
+    container_name: node_server
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - PGHOST=db
+      - PGUSER=postgres
+      - PGPASSWORD=1234
+    depends_on:
+      - db
+  db:
+    container_name: postgres_db
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postgres
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
