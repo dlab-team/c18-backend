@@ -7,3 +7,4 @@ C18 Backend Repositorio
 - Jonathan Riffo
 - Giselle Cifuentes
 - Miguel Brown
+- Marcos Barcia
