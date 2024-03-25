@@ -8,3 +8,5 @@ C18 Backend Repositorio
 - Giselle Cifuentes
 - Miguel Brown
 - Marcos Barcia
+- Bruno Henriquez
+  
