@@ -1,4 +1,4 @@
-FROM node:21-alpine
+FROM node:20.11.1-alpine
 WORKDIR /src
 COPY . .
 RUN npm install
