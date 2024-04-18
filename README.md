@@ -15,3 +15,4 @@ En caso de hacer cambios al proyecto correr el siguiente comando:
 - Giselle Cifuentes
 - Miguel Brown
 - Marcos Barcia
+- Bruno Henriquez
