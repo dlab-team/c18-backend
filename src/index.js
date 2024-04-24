@@ -1,17 +1,7 @@
-const express = require("express");
-const sequelize = require("./util/database");
+import app from "./app.js";
+import sequelize from "./database/database.js";
 
 const PORT = process.env.PORT || 3000;
-const app = express();
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-// app.get("/users", async (req, res) => {});
 
 (async () => {
   try {
@@ -19,6 +9,11 @@ app.get("/", (req, res) => {
     console.log("Database connected");
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   } catch (error) {
-    console.log(error);
+    console.log("No se ha podido conectar al servidor", error);
   }
 })();
+
+
+app.get("/", (req, res) => {
+  res.send("(*_*)");
+});
