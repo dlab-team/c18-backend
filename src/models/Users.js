@@ -1,11 +1,11 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
-import bcrypt from "bcrypt";
 
-export const User = sequelize.define(
-  "User",
+
+export const Usuario = sequelize.define(
+  "Usuario",
   {
-    first_name: {
+    nombre: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -15,51 +15,63 @@ export const User = sequelize.define(
         },
       },
     },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        is: {
-          args: /^[\p{LC} ]+$/u,
-          msg: "Name can only contain letters and spaces",
-        },
-      },
-    },
-    phone: {
-      type: DataTypes.STRING,
-      validate: {
-        is: {
-          args: /^\+\d{7,15}$/,
-          msg: "Not a valid phone number",
-        },
-      },
-    },
-    email: {
+    correo_electronico: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
         isEmail: {
-          args: true,
-          msg: "Not a valid email",
+          msg: "Invalid email",
         },
       },
     },
-    password: {
+    contrasena: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [8, 255],
+          msg: "Password must be at least 8 characters long",
+        },
+      },
     },
-    password_date: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
+    pais:{
+      type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Country can only contain letters and spaces",
+        },
+      },
     },
-  },
-  {
-    tableName: "users",
-    hooks: {
-      beforeCreate: async (user) => {
-        user.password = bcrypt.hashSync(user.password, 12);
+    experiencia:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isInt: {
+          msg: "Experience must be an integer",
+        },
+      },
+    },
+    educacion:{
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Education can only contain letters and spaces",
+        },
+      },
+    },
+    rol:{
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Role can only contain letters and spaces",
+        },
       },
     },
   }
