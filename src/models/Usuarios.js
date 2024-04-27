@@ -2,8 +2,8 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
 
-export const Usuario = sequelize.define(
-  "Usuario",
+export const Usuarios = sequelize.define(
+  "Usuarios",
   {
     nombre: {
       type: DataTypes.STRING,
