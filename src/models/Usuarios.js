@@ -1,6 +1,8 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
+import { Metricas } from "./Metricas.js";
+
 
 export const Usuarios = sequelize.define(
   "Usuarios",
@@ -76,3 +78,14 @@ export const Usuarios = sequelize.define(
     },
   }
 );
+
+Usuarios.hasOne(Metricas, {
+  foreignKey: {
+    name: "usuario_id",
+    sourceKey: "id",
+  },
+})
+Metricas.belongsTo(Usuarios,{
+  foreignKey: "usuario_id",
+  targetKey: "id",
+})
