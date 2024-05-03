@@ -1,12 +1,19 @@
 import app from "./app.js";
 import { sequelize } from "./database/database.js";
 
-import "./models/InterviewRecord.js";
+import empleosRoutes from "./routes/empleosRoutes.js";
+
+import "./models/RegistroEntrevistas.js";
 import "./models/Usuarios.js";
 import "./models/Notas.js";
 import "./models/Metricas.js";
+import "./models/Empleos.js";
+import "./models/MetasSemanalesAplicaciones.js";
 
 const PORT = process.env.PORT || 3000;
+
+// Usa las rutas en la app
+app.use(empleosRoutes);
 
 (async () => {
   try {
@@ -23,3 +30,5 @@ const PORT = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   res.send("(*_*)");
 });
+
+// pg_ctl start -D "C:\Program Files\PostgreSQL\16\data"

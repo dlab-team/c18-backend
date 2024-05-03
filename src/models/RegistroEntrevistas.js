@@ -2,47 +2,47 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 //import bcrypt from "bcrypt";
 
-export const InterviewRecord = sequelize.define(
-  "InterviewRecord",
+export const RegistroEntrevistas = sequelize.define(
+  "RegistroEntrevistas",
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
-      comment: "Primary Key",
+      comment: "Clave primaria",
     },
     /*
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "Users",
+        model: "Usuarios",
         key: "id",
       },
-      comment: "Foreign key referencing Users",
+      comment: "Clave que hace referencia a Usuarios",
     },
     job_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "Jobs",
+        model: "Trabajos",
         key: "id",
       },
-      comment: "Foreign key referencing Jobs",
+      comment: "Clave que hace referencia a Trabajos",
     }, */
-    interview_date: {
+    fecha_entrevista: {
       type: DataTypes.DATEONLY,
       allowNull: false,
-      comment: "Interview date",
+      comment: "Fecha de la entrevista",
     },
-    status: {
+    estado: {
       type: DataTypes.STRING(20),
       allowNull: false,
-      comment: "Status of the interview",
+      comment: "Estado de la entrevista",
     },
   },
   {
-    tableName: "interview_records",
+    tableName: "registros_entrevistas",
   }
 );
