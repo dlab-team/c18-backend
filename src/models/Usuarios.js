@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
-import { InterviewRecord } from "./InterviewRecord.js";
 import { MetasSemanalesAplicaciones } from "./MetasSemanalesAplicaciones.js";
 import { Metricas } from "./Metricas.js";
+import { RegistroEntrevistas } from "./RegistroEntrevistas.js";
 
 
 export const Usuarios = sequelize.define(
@@ -96,13 +96,13 @@ Metricas.belongsTo(Usuarios,{
 
 // Relacion 1 a muchos Usuarios - InterviewRecord
 
-Usuarios.hasMany(InterviewRecord, {
+Usuarios.hasMany(RegistroEntrevistas, {
   foreignKey: {
     name: "usuario_id",
     sourceKey: "id",
   },
 })
-InterviewRecord.belongsTo(Usuarios,{
+RegistroEntrevistas.belongsTo(Usuarios,{
   foreignKey: "usuario_id",
   targetKey: "id",
 })

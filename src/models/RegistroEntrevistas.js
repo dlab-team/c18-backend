@@ -13,25 +13,6 @@ export const RegistroEntrevistas = sequelize.define(
       allowNull: false,
       comment: "Clave primaria",
     },
-    /*
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Usuarios",
-        key: "id",
-      },
-      comment: "Clave que hace referencia a Usuarios",
-    },
-    job_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Trabajos",
-        key: "id",
-      },
-      comment: "Clave que hace referencia a Trabajos",
-    }, */
     fecha_entrevista: {
       type: DataTypes.DATEONLY,
       allowNull: false,
@@ -50,13 +31,13 @@ export const RegistroEntrevistas = sequelize.define(
 
 // Relacion uno a muchos InterviewRecord - Empleos
 
-InterviewRecord.hasMany(Empleos, {
+RegistroEntrevistas.hasMany(Empleos, {
   foreignKey: {
     name: "id",
     allowNull: false,
   },
 });
-Empleos.belongsTo(InterviewRecord, {
+Empleos.belongsTo(RegistroEntrevistas, {
   foreignKey: {
     name: "id",
     allowNull: false,
