@@ -10,6 +10,9 @@ import "./models/Usuarios.js";
 
 const PORT = process.env.PORT || 3000;
 
+// Usa las rutas en la app
+app.use(empleosRoutes);
+
 (async () => {
   try {
     await sequelize.sync({ force: true });
@@ -25,3 +28,5 @@ const PORT = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   res.send("(*_*)");
 });
+
+// pg_ctl start -D "C:\Program Files\PostgreSQL\16\data"
