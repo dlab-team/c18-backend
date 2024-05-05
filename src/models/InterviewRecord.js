@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
-//import bcrypt from "bcrypt";
+
+import { Empleos } from "./Empleos.js";
 
 export const InterviewRecord = sequelize.define(
   "InterviewRecord",
@@ -12,25 +13,6 @@ export const InterviewRecord = sequelize.define(
       allowNull: false,
       comment: "Primary Key",
     },
-    /*
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Users",
-        key: "id",
-      },
-      comment: "Foreign key referencing Users",
-    },
-    job_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Jobs",
-        key: "id",
-      },
-      comment: "Foreign key referencing Jobs",
-    }, */
     interview_date: {
       type: DataTypes.DATEONLY,
       allowNull: false,
@@ -46,3 +28,18 @@ export const InterviewRecord = sequelize.define(
     tableName: "interview_records",
   }
 );
+
+// Relacion uno a muchos InterviewRecord - Empleos
+
+InterviewRecord.hasMany(Empleos, {
+  foreignKey: {
+    name: "id",
+    allowNull: false,
+  },
+});
+Empleos.belongsTo(InterviewRecord, {
+  foreignKey: {
+    name: "id",
+    allowNull: false,
+  },
+});

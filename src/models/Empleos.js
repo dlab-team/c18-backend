@@ -1,6 +1,8 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
+import { Notas } from "./Notas.js";
+
 export const Empleos = sequelize.define(
   "Empleos",
   {
@@ -90,3 +92,19 @@ export const Empleos = sequelize.define(
     },
   }
 );
+
+// Relacion uno a muchos Empleos - Notas
+
+Empleos.hasMany(Notas, {
+  foreignKey: {
+    name: "empleo_id",
+    allowNull: false,
+  },
+});
+
+Notas.belongsTo(Empleos, {
+  foreignKey: {
+    name: "empleo_id",
+    allowNull: false,
+  },
+});

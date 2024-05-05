@@ -1,6 +1,8 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
+import { InterviewRecord } from "./InterviewRecord.js";
+import { MetasSemanalesAplicaciones } from "./MetasSemanalesAplicaciones.js";
 import { Metricas } from "./Metricas.js";
 
 
@@ -79,6 +81,8 @@ export const Usuarios = sequelize.define(
   }
 );
 
+// Relacion 1 a 1 Usuarios - Metricas
+
 Usuarios.hasOne(Metricas, {
   foreignKey: {
     name: "usuario_id",
@@ -86,6 +90,34 @@ Usuarios.hasOne(Metricas, {
   },
 })
 Metricas.belongsTo(Usuarios,{
+  foreignKey: "usuario_id",
+  targetKey: "id",
+})
+
+// Relacion 1 a muchos Usuarios - InterviewRecord
+
+Usuarios.hasMany(InterviewRecord, {
+  foreignKey: {
+    name: "usuario_id",
+    sourceKey: "id",
+  },
+})
+InterviewRecord.belongsTo(Usuarios,{
+  foreignKey: "usuario_id",
+  targetKey: "id",
+})
+
+
+// Relacion 1 a 1 Usuarios - MetasSemanalesAplicaciones
+
+Usuarios.hasOne(MetasSemanalesAplicaciones, {
+  foreignKey: {
+    name: "usuario_id",
+    sourceKey: "id",
+  },
+})
+
+MetasSemanalesAplicaciones.belongsTo(Usuarios,{
   foreignKey: "usuario_id",
   targetKey: "id",
 })
