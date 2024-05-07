@@ -1,8 +1,6 @@
 import app from "./app.js";
 import { sequelize } from "./database/database.js";
 
-import empleosRoutes from "./routes/empleosRoutes.js";
-
 import "./models/Empleos.js";
 import "./models/MetasSemanalesAplicaciones.js";
 import "./models/Metricas.js";
@@ -11,9 +9,6 @@ import "./models/RegistroEntrevistas.js";
 import "./models/Usuarios.js";
 
 const PORT = process.env.PORT || 3000;
-
-// Usa las rutas en la app
-app.use(empleosRoutes);
 
 (async () => {
   try {
