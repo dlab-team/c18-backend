@@ -26,4 +26,3 @@ app.get("/", (req, res) => {
   res.send("(*_*)");
 });
 
-// pg_ctl start -D "C:\Program Files\PostgreSQL\16\data"
