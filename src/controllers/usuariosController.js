@@ -1,8 +1,12 @@
+import { Metas } from "../models/Metas.js";
+import { Metricas } from "../models/Metricas.js";
 import { Usuarios } from "../models/Usuarios.js";
 
 export async function getUsuarios(req, res) {
   try {
-    const usuarios = await Usuarios.findAll();
+    const usuarios = await Usuarios.findAll({
+      include: [{ model: Metas }, { model: Metricas }, "registroEntrevistas"],
+    });
     res.json(usuarios);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -21,7 +25,9 @@ export async function postUsuarios(req, res) {
 export async function getUsuariosPorId(req, res) {
   const id = req.params.id;
   try {
-    const usuario = await Usuarios.findByPk(id);
+    const usuario = await Usuarios.findByPk(id, {
+      include: [{ model: Metas }, { model: Metricas }, "registroEntrevistas"],
+    });
     if (!usuario) {
       return res.status(404).json({ message: "Usuario no encontrado" });
     }
