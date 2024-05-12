@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
-export const Notas = sequelize.define("Notas", {
+export const Notas = sequelize.define("notas", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -11,5 +11,13 @@ export const Notas = sequelize.define("Notas", {
   texto: {
     type: DataTypes.STRING(255),
     allowNull: false,
+  },
+  empleo_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "empleos",
+      key: "id",
+    },
   },
 });

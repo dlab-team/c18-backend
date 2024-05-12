@@ -1,28 +1,49 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
-export const Metricas = sequelize.define("metricas", {
+export const Metas = sequelize.define("metas", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
-    comment: "Clave primaria",
-  },
-  total_postulaciones: {
-    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  total_entradas: {
+
+  semana: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    validate: {
+      isInt: {
+        msg: "La semana debe ser un número entero.",
+      },
+    },
   },
-  ofertas: {
+  cantidad_meta: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    validate: {
+      isInt: {
+        msg: "La cantidad meta debe ser un número entero.",
+      },
+    },
   },
-  guardados: {
+  cantidad_cumplida: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    validate: {
+      isInt: {
+        msg: "La cantidad cumplida debe ser un número entero.",
+      },
+    },
+  },
+  mes: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    validate: {
+      isInt: {
+        msg: "El mes debe ser un número entero.",
+      },
+    },
   },
   usuario_id: {
     type: DataTypes.INTEGER,
