@@ -5,10 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/server.js",
     "migration:create": "npx sequelize-cli migration:generate --name",
-    "migration:run": "npx sequelize-cli db:migrate",
-    "migration:undo": "npx sequelize-cli db:migrate:undo"
+    "migrate": "npx sequelize-cli db:migrate",
+    "migration:undo": "npx sequelize-cli db:migrate:undo",
+    "seed:create": "npx sequelize-cli seed:generate --name ",
+    "seed:all":"npx sequelize-cli db:seed:all",
+    "seed:undo":"npx sequelize-cli db:seed:undo:all"
   },
   "authors": [
     {
