@@ -2,7 +2,7 @@ import { Empleos } from "../models/Empleos.js";
 
 export async function getEmpleos(req, res) {
   try {
-    const empleos = await Empleos.findAll();
+    const empleos = await Empleos.findAll({ include: "notas" });
     res.json(empleos);
   } catch (error) {
     res.status(500).json({ message: error.message });

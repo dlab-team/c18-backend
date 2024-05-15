@@ -2,7 +2,9 @@ import { RegistroEntrevistas } from "../models/RegistroEntrevistas.js";
 
 export async function getEntrevistas(req, res) {
   try {
-    const entrevistas = await RegistroEntrevistas.findAll();
+    const entrevistas = await RegistroEntrevistas.findAll({
+      include: "empleos",
+    });
     res.json(entrevistas);
   } catch (error) {
     res.status(500).json({ message: error.message });

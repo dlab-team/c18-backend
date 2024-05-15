@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "dialect": "postgres",
+    "migrationStorageTableName": "migrations"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "dialect": "postgres",
+    "migrationStorageTableName": "migrations"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "1234",
+    "database": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "dialect": "postgres",
+    "migrationStorageTableName": "migrations"
+  }
+}

@@ -5,10 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src/",
-    "format": "prettier --write ./src"
+    "dev": "nodemon src/server.js",
+    "migration:create": "npx sequelize-cli migration:generate --name",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migration:undo": "npx sequelize-cli db:migrate:undo",
+    "seed:create": "npx sequelize-cli seed:generate --name ",
+    "seed:all":"npx sequelize-cli db:seed:all",
+    "seed:undo":"npx sequelize-cli db:seed:undo:all"
   },
   "authors": [
     {
@@ -50,6 +53,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "globals": "^15.0.0",
     "nodemon": "^3.1.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "sequelize-cli": "^6.6.2"
   }
 }

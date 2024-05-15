@@ -1,11 +1,11 @@
 import { Router } from "express";
 import {
-  getMetas,
   createMeta,
-  getMetaById,
-  updateMetaById,
   deleteMetaById,
-} from "../controllers/metasSemanalesAplicacionesController.js";
+  getMetaById,
+  getMetas,
+  updateMetaById,
+} from "../controllers/metasController.js";
 
 const router = Router();
 
