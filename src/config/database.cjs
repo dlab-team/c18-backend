@@ -2,11 +2,11 @@ require('dotenv').config()
 
 module.exports = {
   development: {
-    username: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE,
-    host: process.env.PGHOST,
-    port: process.env.PGPORT,
+    username: process.env.PGUSER || 'postgres',
+    password: process.env.PGPASSWORD || 'postgres' ,
+    database: process.env.PGDATABASE || 'postgres',
+    host: process.env.PGHOST || 'localhost',
+    port: process.env.PGPORT || '5432',
     dialect: 'postgres',
     migrationStorageTableName: 'migrations'
   },
