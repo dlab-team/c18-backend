@@ -1,10 +1,10 @@
 import { Router } from "express";
 import {
-  getEmpleos,
-  postEmpleos,
-  getEmpleosPorId,
-  putEmpleosPorId,
   deleteEmpleosPorId,
+  getEmpleos,
+  getEmpleosPorId,
+  postEmpleos,
+  putEmpleosPorId,
 } from "../controllers/empleosController.js";
 
 const router = Router();
