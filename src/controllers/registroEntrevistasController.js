@@ -1,9 +1,13 @@
 import { RegistroEntrevistas } from "../models/RegistroEntrevistas.js";
 
+//include
+import { Empleos } from "../models/Empleos.js";
+import { Usuarios } from "../models/Usuarios.js";
+
 export async function getEntrevistas(req, res) {
   try {
     const entrevistas = await RegistroEntrevistas.findAll({
-      include: "empleos",
+      include: [{ model: Empleos }, { model: Usuarios }],
     });
     res.json(entrevistas);
   } catch (error) {
@@ -23,7 +27,9 @@ export async function postEntrevista(req, res) {
 export async function getEntrevistaPorId(req, res) {
   const id = req.params.id;
   try {
-    const entrevista = await RegistroEntrevistas.findByPk(id);
+    const entrevista = await RegistroEntrevistas.findByPk(id, {
+      include: [{ model: Empleos }, { model: Usuarios }],
+    });
     if (!entrevista) {
       return res.status(404).json({ message: "Entrevista no encontrada" });
     }
