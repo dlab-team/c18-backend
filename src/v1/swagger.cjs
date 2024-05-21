@@ -12,7 +12,7 @@ const options = {
     },
     servers: [
       {
-        url: `http://${process.envPGHOST}:${process.env.PORT}`,
+        url: `http://${process.env.PGHOST}:${process.env.PORT}`,
         description: "Development server",
       },
       {
