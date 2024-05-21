@@ -1,11 +1,18 @@
+import { Usuarios } from "../models/Usuarios.js";
+
+// Include
 import { Metas } from "../models/Metas.js";
 import { Metricas } from "../models/Metricas.js";
-import { Usuarios } from "../models/Usuarios.js";
+import { RegistroEntrevistas } from "../models/RegistroEntrevistas.js";
 
 export async function getUsuarios(req, res) {
   try {
     const usuarios = await Usuarios.findAll({
-      include: [{ model: Metas }, { model: Metricas }, "registroEntrevistas"],
+      include: [
+        { model: Metas },
+        { model: Metricas },
+        { model: RegistroEntrevistas },
+      ],
     });
     res.json(usuarios);
   } catch (error) {
@@ -26,7 +33,11 @@ export async function getUsuariosPorId(req, res) {
   const id = req.params.id;
   try {
     const usuario = await Usuarios.findByPk(id, {
-      include: [{ model: Metas }, { model: Metricas }, "registroEntrevistas"],
+      include: [
+        { model: Metas },
+        { model: Metricas },
+        { model: RegistroEntrevistas },
+      ],
     });
     if (!usuario) {
       return res.status(404).json({ message: "Usuario no encontrado" });
