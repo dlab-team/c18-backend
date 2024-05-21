@@ -1,8 +1,11 @@
 import { Metas } from "../models/Metas.js";
 
+//include
+import { Usuarios } from "../models/Usuarios.js";
+
 export async function getMetas(req, res) {
   try {
-    const metas = await Metas.findAll();
+    const metas = await Metas.findAll({ include: { model: Usuarios } });
     res.json(metas);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -21,7 +24,7 @@ export async function createMeta(req, res) {
 export async function getMetaById(req, res) {
   const id = req.params.id;
   try {
-    const meta = await Metas.findByPk(id);
+    const meta = await Metas.findByPk(id, { include: { model: Usuarios } });
     if (!meta) {
       return res.status(404).json({ message: "Meta no encontrada" });
     }

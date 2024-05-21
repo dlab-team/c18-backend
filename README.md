@@ -2,30 +2,56 @@
 
 C18 Backend Repositorio
 
+## API:
+
+   [Documentación API](https://c18-backend.onrender.com/api/v1/docs)
+
 # Instrucciones:
 
 ## Para correr el proyecto ejecutar:
 
-1) `npm install`
-2) `npm run dev`
+
+```bash
+npm install
+npm run dev
+```
 
 ## Para levantar DB:
-1) Agregar la conexion a tu base de datos en el archivo /src/config/config.json
-2) Correr la migracion: `npm run migrate`
+1) Agregar la conexion a tu base de datos en el archivo .env segun ejemplo
+2) Correr la migracion: 
+```bash
+npm run migrate
+```
 
 ### Trabajar con la migracion:
 - Para crear una nueva migracion y modificar la DB: 
-    `npm run migration:create [Nombre]` (cambiar extencion de archivo creado a .cjs)
-- Para deshacer los cambios de la ultima migracion: 
-    `npm run migration:undo`
+
+```bash
+npm run migration:create [Nombre]
+```
+    
+- Para deshacer los cambios de la ultima migracion:
+
+```bash
+npm run migration:undo
+```
+    
 
 ### Trabajar con seeders:
-- Para crear una nueva seed: 
-    `npm run seed:create [Nombre]` (cambiar extencion de archivo creado a .cjs)
+- Para crear una nueva seed (cambiar extencion de archivo creado a .cjs) : 
+```bash
+    npm run seed:create [Nombre] 
+```
 - Para plantar las seeds ya creadas: 
-    `npm run seed:all` 
+
+```bash
+    npm run seed:all
+```
 - Para deshacer las seeds ya plantadas: 
-    `npm run seed:undo`
+
+```bash
+    npm run seed:undo
+```
 
 
 ### Docker (No necesario):

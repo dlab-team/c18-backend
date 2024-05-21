@@ -1,5 +1,9 @@
 import { Empleos } from "../models/Empleos.js";
 
+// Include
+import { Notas } from "../models/Notas.js";
+import { RegistroEntrevistas } from "../models/RegistroEntrevistas.js";
+
 export async function getEmpleos(req, res) {
   try {
     const empleos = await Empleos.findAll({ include: "notas" });
@@ -21,7 +25,9 @@ export async function postEmpleos(req, res) {
 export async function getEmpleosPorId(req, res) {
   const id = req.params.id;
   try {
-    const empleo = await Empleos.findByPk(id);
+    const empleo = await Empleos.findByPk(id, {
+      include: [{ model: Notas }, { model: RegistroEntrevistas }],
+    });
     if (!empleo) {
       return res.status(404).json({ message: "Empleo no encontrado" });
     }
