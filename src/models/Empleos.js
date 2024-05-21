@@ -104,13 +104,13 @@ export const Empleos = sequelize.define("empleos", {
 Empleos.hasMany(Notas, {
   foreignKey: {
     name: "empleo_id",
-    allowNull: false,
+    sourceKey: "id",
   },
 });
 
 Notas.belongsTo(Empleos, {
   foreignKey: {
     name: "empleo_id",
-    allowNull: false,
+    targetKey: "id",
   },
 });
