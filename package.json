@@ -10,8 +10,8 @@
     "migrate": "npx sequelize-cli db:migrate",
     "migration:undo": "npx sequelize-cli db:migrate:undo",
     "seed:create": "npx sequelize-cli seed:generate --name ",
-    "seed:all":"npx sequelize-cli db:seed:all",
-    "seed:undo":"npx sequelize-cli db:seed:undo:all"
+    "seed:all": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all"
   },
   "authors": [
     {
@@ -35,6 +35,7 @@
   "repository": "https://github.com/dlab-team/c18-backend",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.1",
     "pg": "^8.11.5",
     "pg-hstore": "^2.3.4",
