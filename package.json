@@ -10,8 +10,8 @@
     "migrate": "npx sequelize-cli db:migrate",
     "migration:undo": "npx sequelize-cli db:migrate:undo",
     "seed:create": "npx sequelize-cli seed:generate --name ",
-    "seed:all":"npx sequelize-cli db:seed:all",
-    "seed:undo":"npx sequelize-cli db:seed:undo:all"
+    "seed:all": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all"
   },
   "authors": [
     {
@@ -39,6 +39,8 @@
     "pg": "^8.11.5",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "winston": "^3.13.0"
   },
   "devDependencies": {
