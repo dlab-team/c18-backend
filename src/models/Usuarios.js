@@ -65,13 +65,23 @@ export const Usuarios = sequelize.define("usuarios", {
       },
     },
   },
-  rol: {
+  cargo: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       is: {
         args: /^[\p{LC} ]+$/u,
         msg: "Role can only contain letters and spaces",
+      },
+    },
+  },
+  rol: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    validate: {
+      is: {
+        args: /^[\p{LC} ]+$/u,
+        msg: "Role type can only contain letters and spaces",
       },
     },
   },
