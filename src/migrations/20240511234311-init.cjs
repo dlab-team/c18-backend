@@ -69,13 +69,23 @@ module.exports = {
           },
         },
       },
-      rol: {
+      cargo: {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
           is: {
             args: /^[\p{LC} ]+$/u,
             msg: "Role can only contain letters and spaces",
+          },
+        },
+      },
+      rol: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        validate: {
+          is: {
+            args: /^[\p{LC} ]+$/u,
+            msg: "Role type can only contain letters and spaces",
           },
         },
       },
