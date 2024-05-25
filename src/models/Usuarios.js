@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
+import bcrypt from 'bcrypt';
 
 import { Metas } from "./Metas.js";
 import { Metricas } from "./Metricas.js";
@@ -84,7 +85,13 @@ export const Usuarios = sequelize.define("usuarios", {
         msg: "Role type can only contain letters and spaces",
       },
     },
-  },
+  }
+}, {
+  hooks: {
+    beforeCreate: async(usuario) => {
+      usuario.contrasena = bcrypt.hashSync(usuario.contrasena, 12)
+    }
+  }
 });
 
 // Relacion 1 a 1 Usuarios - Metricas
