@@ -30,6 +30,11 @@ module.exports = {
           },
         },
       },
+      fecha_credenciales: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
+        allowNull: false
+      },
       contrasena: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -353,6 +358,26 @@ module.exports = {
           model: "empleos",
           key: "id",
         },
+      },
+      createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+    });
+    await queryInterface.createTable("tokensInvalidos", {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+      },
+      token: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         type: Sequelize.DATE,

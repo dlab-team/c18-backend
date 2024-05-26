@@ -37,6 +37,11 @@ export const Usuarios = sequelize.define("usuarios", {
       },
     },
   },
+  fecha_credenciales: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    allowNull: false
+  },
   pais: {
     type: DataTypes.STRING,
     allowNull: false,

@@ -4,6 +4,7 @@ import metricasRoutes from "./metricas.routes.js";
 import notasRoutes from "./notas.routes.js";
 import registroEntrevistasRoutes from "./registroEntrevistas.routes.js";
 import usuariosRoutes from "./usuarios.routes.js";
+import autenticacionRoutes from "./autenticacion.routes.js"
 
 export default (app) => {
   app.use(usuariosRoutes);
@@ -12,4 +13,5 @@ export default (app) => {
   app.use(metricasRoutes);
   app.use(notasRoutes);
   app.use(registroEntrevistasRoutes);
+  app.use(autenticacionRoutes);
 };
