@@ -8,11 +8,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 3000;
 
-routes(app);
-
 app.get("/", (req, res) => {
   res.send("c18 API");
 });
+
+routes(app);
 
 app.listen(port, () => {
   console.log(`Server running on port http://localhost:${port}`);
