@@ -1,103 +1,101 @@
+import bcrypt from "bcrypt";
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
-import bcrypt from 'bcrypt';
 
 import { Metas } from "./Metas.js";
 import { Metricas } from "./Metricas.js";
 import { RegistroEntrevistas } from "./RegistroEntrevistas.js";
 
-export const Usuarios = sequelize.define("usuarios", {
-  nombre: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      is: {
-        args: /^[\p{LC} ]+$/u,
-        msg: "Name can only contain letters and spaces",
+export const Usuarios = sequelize.define(
+  "usuarios",
+  {
+    nombre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Name can only contain letters and spaces",
+        },
       },
     },
-  },
-  correo_electronico: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: {
-      isEmail: {
-        msg: "Invalid email",
+    correo_electronico: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: {
+          msg: "Invalid email",
+        },
       },
     },
-  },
-  contrasena: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      len: {
-        args: [8, 255],
-        msg: "Password must be at least 8 characters long",
+    contrasena: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: {
+          args: [8, 255],
+          msg: "Password must be at least 8 characters long",
+        },
       },
     },
-  },
-  fecha_credenciales: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false
-  },
-  pais: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      is: {
-        args: /^[\p{LC} ]+$/u,
-        msg: "Country can only contain letters and spaces",
+    fecha_credenciales: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false,
+    },
+    pais: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Country can only contain letters and spaces",
+        },
       },
     },
-  },
-  experiencia: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    validate: {
-      isInt: {
-        msg: "Experience must be an integer",
+    experiencia: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isInt: {
+          msg: "Experience must be an integer",
+        },
       },
     },
-  },
-  educacion: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      is: {
-        args: /^[\p{LC} ]+$/u,
-        msg: "Education can only contain letters and spaces",
+    educacion: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Education can only contain letters and spaces",
+        },
       },
     },
-  },
-  cargo: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      is: {
-        args: /^[\p{LC} ]+$/u,
-        msg: "Role can only contain letters and spaces",
+    cargo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: {
+          args: /^[\p{LC} ]+$/u,
+          msg: "Role can only contain letters and spaces",
+        },
       },
     },
+    rol: {
+      type: DataTypes.ENUM("admin", "user", "inactivo"),
+      allowNull: false,
+    },
   },
-  rol: {
-    type: DataTypes.STRING,
-    allowNull: true,
-    validate: {
-      is: {
-        args: /^[\p{LC} ]+$/u,
-        msg: "Role type can only contain letters and spaces",
+  {
+    hooks: {
+      beforeCreate: async (usuario) => {
+        usuario.contrasena = bcrypt.hashSync(usuario.contrasena, 12);
       },
     },
   }
-}, {
-  hooks: {
-    beforeCreate: async(usuario) => {
-      usuario.contrasena = bcrypt.hashSync(usuario.contrasena, 12)
-    }
-  }
-});
+);
 
 // Relacion 1 a 1 Usuarios - Metricas
 
