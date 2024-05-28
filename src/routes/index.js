@@ -10,10 +10,18 @@ import { requiereAuth, rolAccess } from "../middleware/auth.js";
 
 export default (app) => {
   app.use(autenticacionRoutes);
-  app.use(empleosRoutes);
-  app.use(metas);
-  app.use(notasRoutes);
-  app.use(registroEntrevistasRoutes);
   app.use(usuariosRoutes);
-  app.use(requiereAuth, rolAccess({ roles: ["user"] }), metricasRoutes);
+  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), empleosRoutes);
+  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), metas);
+  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), notasRoutes);
+  app.use(
+    requiereAuth,
+    rolAccess({ roles: ["user", "admin"] }),
+    registroEntrevistasRoutes
+  );
+  app.use(
+    requiereAuth,
+    rolAccess({ roles: ["user", "admin"] }),
+    metricasRoutes
+  );
 };
