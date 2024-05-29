@@ -1,5 +1,6 @@
 import { Usuarios } from "../models/Usuarios.js";
 import transporter from "../config/mail.js";
+import jwt from "jsonwebtoken";
 
 // Include
 import { Metas } from "../models/Metas.js";
@@ -25,14 +26,20 @@ export async function postUsuarios(req, res) {
   try {
     const nuevoUsuario = await Usuarios.create(req.body);
 
+    const token = jwt.sign(
+      { sub: nuevoUsuario.id, activacion: true },
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_ACTIVATION_EXPIRES_IN }
+    );
+
     const correo_activacion = {
       from: `ADL Empleabilidad <${process.env.MAIL_USER}>`,
       to: nuevoUsuario.correo_electronico,
       subject: '¡Bienvenido a ADL Empleabilidad! Activa tu cuenta',
-      text: 'Accede a este link para activar tu cuenta: URL aquí',
+      text: `Accede a este link para activar tu cuenta: ${process.env.FRONTEND_URL}activacion?token=${token}`,
       html: `
       <h1>¡Bienvenido a ADL Empleabilidad!</h1>
-      <p>Puedes activar tu cuenta haciendo clic en este link: <a href='#'>Activa tu cuenta</a></p>
+      <p>Puedes activar tu cuenta haciendo clic en este link: <a href='${process.env.FRONTEND_URL}activacion?token=${token}'>Activa tu cuenta</a></p>
       `
     }
 
