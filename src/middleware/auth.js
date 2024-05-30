@@ -41,6 +41,16 @@ export async function requiereAuth(req, res, next) {
   }
 }
 
+export function invalidarToken(req, res, next) {
+  try {
+    const token = req.header("Authorization");
+    TokensInvalidos.create({ token: token });
+    next();
+  } catch (error) {
+    res.status(500).json({ error: "Error en el servidor" });
+  }
+}
+
 export function rolAccess(opciones = { roles: ["admin", "user", "inactivo"] }) {
   return async (req, res, next) => {
     try {
