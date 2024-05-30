@@ -5,12 +5,14 @@ import metricasRoutes from "./metricas.routes.js";
 import notasRoutes from "./notas.routes.js";
 import registroEntrevistasRoutes from "./registroEntrevistas.routes.js";
 import usuariosRoutes from "./usuarios.routes.js";
+import passwordRoutes from "./password.routes.js";
 
 import { requiereAuth, rolAccess } from "../middleware/auth.js";
 
 export default (app) => {
   app.use(autenticacionRoutes);
   app.use(usuariosRoutes);
+  app.use(passwordRoutes);
   app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), empleosRoutes);
   app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), metas);
   app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), notasRoutes);
