@@ -23,7 +23,7 @@ async function verificarToken(token) {
 
 export async function requiereAuth(req, res, next) {
   try {
-    const token = req.headers.authorization;
+    const token = req.headers.authorization.split(' ')[1];
     if (token) {
       const tokenVerificado = await verificarToken(token);
       if (tokenVerificado) {

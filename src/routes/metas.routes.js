@@ -9,10 +9,10 @@ import {
 
 const router = Router();
 
-router.get("/metas", getMetas);
-router.post("/metas", createMeta);
-router.get("/metas/:id", getMetaById);
-router.put("/metas/:id", updateMetaById);
-router.delete("/metas/:id", deleteMetaById);
+router.get("/", getMetas);
+router.post("/", createMeta);
+router.get("/:id", getMetaById);
+router.put("/:id", updateMetaById);
+router.delete("/:id", deleteMetaById);
 
 export default router;

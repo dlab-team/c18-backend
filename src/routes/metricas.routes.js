@@ -4,11 +4,10 @@ import { deleteMetricasPorId, getMetricas, getMetricasPorId, postMetricas, putMe
 
 const router = Router();
 
-router.get('/metricas', getMetricas);
-router.post('/metricas', postMetricas);
-router.get('/metricas/:id', getMetricasPorId);
-router.put('/metricas/:id', putMetricasPorId);
-router.delete('/metricas/:id', deleteMetricasPorId);
+router.get('/', getMetricas);
+router.post('/', postMetricas);
+router.get('/:id', getMetricasPorId);
+router.put('/:id', putMetricasPorId);
+router.delete('/:id', deleteMetricasPorId);
 
 export default router;
-
