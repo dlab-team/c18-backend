@@ -1,7 +1,12 @@
 "use strict";
 
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.dropTable("PasswordResetTokens");
+  },
+
+  async down(queryInterface, Sequelize) {
     await queryInterface.createTable("PasswordResetTokens", {
       id: {
         type: Sequelize.INTEGER,
@@ -34,9 +39,5 @@ module.exports = {
         defaultValue: Sequelize.NOW,
       },
     });
-  },
-
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("PasswordResetTokens");
   },
 };
