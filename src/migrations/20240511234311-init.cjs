@@ -1,5 +1,7 @@
 "use strict";
 
+const { default: e } = require("express");
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -33,7 +35,7 @@ module.exports = {
       fecha_credenciales: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
-        allowNull: false
+        allowNull: false,
       },
       contrasena: {
         type: Sequelize.STRING,
@@ -47,7 +49,7 @@ module.exports = {
       },
       pais: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           is: {
             args: /^[\p{LC} ]+$/u,
@@ -57,7 +59,7 @@ module.exports = {
       },
       experiencia: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         validate: {
           isInt: {
             msg: "Experience must be an integer",
@@ -66,7 +68,7 @@ module.exports = {
       },
       educacion: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           is: {
             args: /^[\p{LC} ]+$/u,
@@ -76,7 +78,7 @@ module.exports = {
       },
       cargo: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           is: {
             args: /^[\p{LC} ]+$/u,
@@ -85,12 +87,13 @@ module.exports = {
         },
       },
       rol: {
-        type: Sequelize.STRING,
-        allowNull: true,
+        type: Sequelize.ENUM("admin", "user", "inactivo"),
+        allowNull: false,
+        defaultValue: "inactivo",
         validate: {
-          is: {
-            args: /^[\p{LC} ]+$/u,
-            msg: "Role type can only contain letters and spaces",
+          notContains: {
+            args: ["admin", "user"],
+            msg: "Role can only be inactivo",
           },
         },
       },
@@ -389,7 +392,7 @@ module.exports = {
       },
       token: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       createdAt: {
         type: Sequelize.DATE,
