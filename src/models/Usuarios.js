@@ -46,7 +46,7 @@ export const Usuarios = sequelize.define(
     },
     pais: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         is: {
           args: /^[\p{LC} ]+$/u,
@@ -56,7 +56,7 @@ export const Usuarios = sequelize.define(
     },
     experiencia: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isInt: {
           msg: "Experience must be an integer",
@@ -65,7 +65,7 @@ export const Usuarios = sequelize.define(
     },
     educacion: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         is: {
           args: /^[\p{LC} ]+$/u,
@@ -75,7 +75,7 @@ export const Usuarios = sequelize.define(
     },
     cargo: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         is: {
           args: /^[\p{LC} ]+$/u,
@@ -86,6 +86,7 @@ export const Usuarios = sequelize.define(
     rol: {
       type: DataTypes.ENUM("admin", "user", "inactivo"),
       allowNull: false,
+      defaultValue: "inactivo",
     },
   },
   {
