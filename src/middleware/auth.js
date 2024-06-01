@@ -23,7 +23,7 @@ async function verificarToken(token) {
 
 export async function requiereAuth(req, res, next) {
   try {
-    const token = req.headers.authorization.split(' ')[1];
+    const token = req.headers.authorization.split(" ")[1];
     if (token) {
       const tokenVerificado = await verificarToken(token);
       if (tokenVerificado) {
@@ -37,6 +37,16 @@ export async function requiereAuth(req, res, next) {
     }
   } catch (error) {
     console.log(error);
+    res.status(500).json({ error: "Error en el servidor" });
+  }
+}
+
+export function invalidarToken(req, res, next) {
+  try {
+    const token = req.headers.authorization.split(" ")[1];
+    TokensInvalidos.create({ token: token });
+    next();
+  } catch (error) {
     res.status(500).json({ error: "Error en el servidor" });
   }
 }
