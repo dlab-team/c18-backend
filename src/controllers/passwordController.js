@@ -52,7 +52,9 @@ export async function solicitarResetContrasena(req, res) {
 
 export async function resetearContrasena(req, res) {
   try {
-    const { token, nuevaContrasena } = req.body;
+    const { nuevaContrasena } = req.body;
+    const token = req.headers.authorization.split(" ")[1];
+    // formato token: 'Authorization: Bearer header.payload.signature'
 
     let payload;
     try {

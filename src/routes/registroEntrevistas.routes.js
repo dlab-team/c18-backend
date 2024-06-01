@@ -9,10 +9,10 @@ import {
 
 const router = Router();
 
-router.get("/entrevistas", getEntrevistas);
-router.post("/entrevistas", postEntrevista);
-router.get("/entrevistas/:id", getEntrevistaPorId);
-router.put("/entrevistas/:id", putEntrevistaPorId);
-router.delete("/entrevistas/:id", deleteEntrevistaPorId);
+router.get("/", getEntrevistas);
+router.post("/", postEntrevista);
+router.get("/:id", getEntrevistaPorId);
+router.put("/:id", putEntrevistaPorId);
+router.delete("/:id", deleteEntrevistaPorId);
 
 export default router;
