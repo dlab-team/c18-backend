@@ -1,6 +1,6 @@
-import { Usuarios } from "../models/Usuarios.js";
-import transporter from "../config/mail.js";
 import jwt from "jsonwebtoken";
+import transporter from "../config/mail.js";
+import { Usuarios } from "../models/Usuarios.js";
 
 // Include
 import { Metas } from "../models/Metas.js";
@@ -24,8 +24,9 @@ export async function getUsuarios(req, res) {
 
 export async function postUsuarios(req, res) {
   try {
+    delete req.body.rol;
     const nuevoUsuario = await Usuarios.create(req.body);
-
+    console.log(nuevoUsuario);
     const token = jwt.sign(
       { sub: nuevoUsuario.id, activacion: true },
       process.env.JWT_SECRET,
@@ -35,21 +36,24 @@ export async function postUsuarios(req, res) {
     const correo_activacion = {
       from: `ADL Empleabilidad <${process.env.MAIL_USER}>`,
       to: nuevoUsuario.correo_electronico,
-      subject: '¡Bienvenido a ADL Empleabilidad! Activa tu cuenta',
+      subject: "¡Bienvenido a ADL Empleabilidad! Activa tu cuenta",
       text: `Accede a este link para activar tu cuenta: ${process.env.FRONTEND_URL}activacion?token=${token}`,
       html: `
       <h1>¡Bienvenido a ADL Empleabilidad!</h1>
       <p>Puedes activar tu cuenta haciendo clic en este link: <a href='${process.env.FRONTEND_URL}activacion?token=${token}'>Activa tu cuenta</a></p>
-      `
-    }
+      `,
+    };
 
     transporter.sendMail(correo_activacion, (err, info) => {
       if (err) {
         console.error(err);
         return;
       }
-      console.log("Correo de activación enviado con éxito. ID Correo: %s", info.messageId);
-    })
+      console.log(
+        "Correo de activación enviado con éxito. ID Correo: %s",
+        info.messageId
+      );
+    });
 
     res.status(201).json(nuevoUsuario);
   } catch (error) {
