@@ -4,10 +4,10 @@ import { getNotas, postNota, getNotaPorId, putNotaPorId, deleteNotaPorId } from 
 const router = Router();
 
 // Rutas para las notas
-router.get('/notas', getNotas);
-router.post('/notas', postNota);
-router.get('/notas/:id', getNotaPorId);
-router.put('/notas/:id', putNotaPorId);
-router.delete('/notas/:id', deleteNotaPorId);
+router.get('/', getNotas);
+router.post('/', postNota);
+router.get('/:id', getNotaPorId);
+router.put('/:id', putNotaPorId);
+router.delete('/:id', deleteNotaPorId);
 
 export default router;

@@ -9,17 +9,19 @@ import usuariosRoutes from "./usuarios.routes.js";
 import { requiereAuth, rolAccess } from "../middleware/auth.js";
 
 export default (app) => {
-  app.use(autenticacionRoutes);
-  app.use(usuariosRoutes);
-  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), empleosRoutes);
-  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), metas);
-  app.use(requiereAuth, rolAccess({ roles: ["user", "admin"] }), notasRoutes);
+  app.use('/autenticacion', autenticacionRoutes);
+  app.use('/usuarios', usuariosRoutes);
+  app.use('/empleos', requiereAuth, rolAccess({ roles: ["user", "admin"] }), empleosRoutes);
+  app.use('/metas', requiereAuth, rolAccess({ roles: ["user", "admin"] }), metas);
+  app.use('/notas', requiereAuth, rolAccess({ roles: ["user", "admin"] }), notasRoutes);
   app.use(
+    '/entrevistas',
     requiereAuth,
     rolAccess({ roles: ["user", "admin"] }),
     registroEntrevistasRoutes
   );
   app.use(
+    '/metricas',
     requiereAuth,
     rolAccess({ roles: ["user", "admin"] }),
     metricasRoutes

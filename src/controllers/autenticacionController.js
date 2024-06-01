@@ -43,7 +43,7 @@ export async function activar(req, res) {
     } else {
       res.status(400).json({ message: "Error 400: Usuario ya activado" });
     }
-    res.status(501).end();
+    res.status(204).end();
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
