@@ -87,12 +87,6 @@ export const Usuarios = sequelize.define(
       type: DataTypes.ENUM("admin", "user", "inactivo"),
       allowNull: false,
       defaultValue: "inactivo",
-      validate: {
-        notContains: {
-          args: ["admin", "user"],
-          msg: "Role can only be inactivo",
-        },
-      },
     },
   },
   {
