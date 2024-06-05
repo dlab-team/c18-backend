@@ -34,7 +34,7 @@ export async function login(req, res) {
 
 export async function activar(req, res) {
   try {
-    const usuario = await Usuarios.findByPk(req.usuario.id);
+    const usuario = await Usuarios.findByPk(req.payload.sub);
     if (usuario.rol === "inactivo") {
       usuario.rol = "user";
       await usuario.save();
