@@ -15,7 +15,7 @@ async function verificarToken(token) {
       return false;
     }
 
-    return tokenVerificado.sub;
+    return tokenVerificado;
   } catch (error) {
     return false;
   }
@@ -23,11 +23,11 @@ async function verificarToken(token) {
 
 export async function requiereAuth(req, res, next) {
   try {
-    const token = req.headers.authorization.split(" ")[1];
+    const token = req.headers.authorization;
     if (token) {
-      const tokenVerificado = await verificarToken(token);
+      const tokenVerificado = await verificarToken(token.split(" ")[1]);
       if (tokenVerificado) {
-        req.usuario = await Usuarios.findByPk(tokenVerificado);
+        req.payload = tokenVerificado;
         next();
       } else {
         res.status(401).json({ error: "Token inválido" });
@@ -54,7 +54,7 @@ export function invalidarToken(req, res, next) {
 export function rolAccess(opciones = { roles: ["admin", "user", "inactivo"] }) {
   return async (req, res, next) => {
     try {
-      const usuario = await Usuarios.findByPk(req.usuario.id, {
+      const usuario = await Usuarios.findByPk(req.payload.sub, {
         attributes: ["id", "rol"],
       });
       if (opciones.roles.includes(usuario.rol)) {
