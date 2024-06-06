@@ -7,42 +7,36 @@ module.exports = {
       "notas",
       [
         {
-          id: 1,
           texto: "Nulla nisl. Nunc nisl.",
           empleo_id: 21,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           texto: "Etiam justo. Etiam pretium iaculis justo.",
           empleo_id: 29,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           texto: "Aenean auctor gravida sem.",
           empleo_id: 13,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           texto: "Integer tincidunt ante vel ipsum.",
           empleo_id: 1,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           texto: "Nulla nisl. Nunc nisl.",
           empleo_id: 35,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           texto:
             "Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.",
           empleo_id: 11,
@@ -50,7 +44,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           texto:
             "Duis bibendum, felis sed interdum venenatis, turpis enim blanditetium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
           empleo_id: 1,
@@ -58,7 +51,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           texto:
             "Donec ut dolor. Morbi vel lectus ioncus sed, vestibulum sit amet, cursus idt, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",
           empleo_id: 28,
@@ -66,7 +58,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           texto:
             "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
           empleo_id: 33,
@@ -74,7 +65,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           texto:
             "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
           empleo_id: 38,
@@ -82,7 +72,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           texto:
             "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
           empleo_id: 24,
@@ -90,14 +79,12 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           texto: "Sed ante.",
           empleo_id: 32,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           texto:
             "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
           empleo_id: 33,
@@ -105,7 +92,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           texto:
             "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo.",
           empleo_id: 26,
@@ -113,7 +99,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           texto:
             "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
           empleo_id: 8,
@@ -121,14 +106,12 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 16,
           texto: "Nullam porttitor lacus at turpis.",
           empleo_id: 21,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 17,
           texto:
             "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
           empleo_id: 5,
@@ -136,7 +119,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 18,
           texto:
             "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
           empleo_id: 9,
@@ -144,7 +126,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 19,
           texto:
             "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
           empleo_id: 25,
@@ -152,7 +133,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 20,
           texto:
             "Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
           empleo_id: 6,
@@ -160,7 +140,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 21,
           texto:
             "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
           empleo_id: 38,
@@ -168,7 +147,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 22,
           texto:
             "Integer aliquet, massa id lobortia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
           empleo_id: 27,
@@ -176,7 +154,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 23,
           texto:
             "Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
           empleo_id: 13,
@@ -184,14 +161,12 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 24,
           texto: "Integer ac leo.",
           empleo_id: 34,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 25,
           texto:
             "Donec diam neque, vestibulum eget, vulputate ut,sollicitudin mi, sit amet lobortis sapien sapien non mi.",
           empleo_id: 37,
@@ -199,7 +174,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 26,
           texto:
             "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
           empleo_id: 33,
@@ -207,21 +181,18 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 27,
           texto: "Nulla tellus. In sagittis dui vel nisl.",
           empleo_id: 25,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 28,
           texto: "Curabitur at ipsum ac tellus semper interdum.",
           empleo_id: 1,
           createdAt: "2024-05-11",
           updatedAt: "2024-05-11",
         },
         {
-          id: 29,
           texto:
             "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
           empleo_id: 15,
@@ -229,7 +200,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 30,
           texto:
             "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis.",
           empleo_id: 11,

@@ -7,7 +7,6 @@ module.exports = {
       "registroEntrevistas",
       [
         {
-          id: 1,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 9,
@@ -15,7 +14,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           fecha_entrevista: "2024-05-11",
           estado: "oferta",
           usuario_id: 12,
@@ -23,7 +21,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 8,
@@ -31,7 +28,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 13,
@@ -39,7 +35,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           fecha_entrevista: "2024-05-11",
           estado: "oferta",
           usuario_id: 2,
@@ -47,7 +42,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           fecha_entrevista: "2024-05-11",
           estado: "oferta",
           usuario_id: 3,
@@ -55,7 +49,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           fecha_entrevista: "2024-05-11",
           estado: "entrevista",
           usuario_id: 13,
@@ -63,7 +56,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 6,
@@ -71,7 +63,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           fecha_entrevista: "2024-05-11",
           estado: "entrevista",
           usuario_id: 8,
@@ -79,7 +70,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 8,
@@ -87,7 +77,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           fecha_entrevista: "2024-05-11",
           estado: "postulado",
           usuario_id: 13,
@@ -95,7 +84,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 3,
@@ -103,7 +91,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           fecha_entrevista: "2024-05-11",
           estado: "postulado",
           usuario_id: 14,
@@ -111,7 +98,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           fecha_entrevista: "2024-05-11",
           estado: "oferta",
           usuario_id: 15,
@@ -119,7 +105,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           fecha_entrevista: "2024-05-11",
           estado: "contratado",
           usuario_id: 6,

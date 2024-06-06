@@ -7,7 +7,6 @@ module.exports = {
       "metas",
       [
         {
-          id: 1,
           semana: 3,
           cantidad_meta: 8,
           cantidad_cumplida: 10,
@@ -17,7 +16,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           semana: 10,
           cantidad_meta: 16,
           cantidad_cumplida: 27,
@@ -27,7 +25,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           semana: 2,
           cantidad_meta: 28,
           cantidad_cumplida: 26,
@@ -37,7 +34,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           semana: 6,
           cantidad_meta: 11,
           cantidad_cumplida: 10,
@@ -47,7 +43,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           semana: 1,
           cantidad_meta: 13,
           cantidad_cumplida: 19,
@@ -57,7 +52,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           semana: 10,
           cantidad_meta: 24,
           cantidad_cumplida: 8,
@@ -67,7 +61,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           semana: 8,
           cantidad_meta: 18,
           cantidad_cumplida: 26,
@@ -77,7 +70,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           semana: 1,
           cantidad_meta: 30,
           cantidad_cumplida: 6,
@@ -87,7 +79,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           semana: 7,
           cantidad_meta: 13,
           cantidad_cumplida: 19,
@@ -97,7 +88,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           semana: 6,
           cantidad_meta: 7,
           cantidad_cumplida: 23,
@@ -107,7 +97,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           semana: 7,
           cantidad_meta: 21,
           cantidad_cumplida: 18,
@@ -117,7 +106,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           semana: 2,
           cantidad_meta: 12,
           cantidad_cumplida: 23,
@@ -127,7 +115,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           semana: 10,
           cantidad_meta: 23,
           cantidad_cumplida: 19,
@@ -137,7 +124,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           semana: 1,
           cantidad_meta: 5,
           cantidad_cumplida: 15,
@@ -147,7 +133,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           semana: 10,
           cantidad_meta: 23,
           cantidad_cumplida: 1,

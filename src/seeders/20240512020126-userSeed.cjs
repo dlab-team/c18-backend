@@ -8,7 +8,6 @@ module.exports = {
       "usuarios",
       [
         {
-          id: 1,
           nombre: "Jacklyn",
           correo_electronico: "jgrigoletti0@forbes.com",
           contrasena: bcrypt.hashSync("aR6/SRN%(L", 12),
@@ -22,7 +21,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           nombre: "Sutherland",
           correo_electronico: "smcghie1@un.org",
           contrasena: bcrypt.hashSync("pH6$KP<GPtssM~", 12),
@@ -36,7 +34,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           nombre: "Morty",
           correo_electronico: "mturbitt2@theglobeandmail.com",
           contrasena: bcrypt.hashSync("sH4*_P\\L", 12),
@@ -50,7 +47,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           nombre: "Daisi",
           correo_electronico: "dsnow3@infoseek.co.jp",
           contrasena: bcrypt.hashSync("zK0`q,/tQ4s>k*r", 12),
@@ -64,7 +60,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           nombre: "Shandy",
           correo_electronico: "sjouannot4@microsoft.com",
           contrasena: bcrypt.hashSync("kA5$UCa$0ppwRl?", 12),
@@ -79,7 +74,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           nombre: "Buiron",
           correo_electronico: "bshillito5@state.gov",
           contrasena: bcrypt.hashSync("tR5}7g>jCJ", 12),
@@ -93,7 +87,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           nombre: "Kirbie",
           correo_electronico: "kturmel6@answers.com",
           contrasena: bcrypt.hashSync("sS5)(kkh#+", 12),
@@ -107,7 +100,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           nombre: "Cobb",
           correo_electronico: "cainsley7@w3.org",
           contrasena: bcrypt.hashSync('jY0"vl>)YElv%wk', 12),
@@ -121,7 +113,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           nombre: "Susie",
           correo_electronico: "skettlewell8@slideshare.net",
           contrasena: bcrypt.hashSync("eE4+xmG'5<", 12),
@@ -135,7 +126,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           nombre: "Lindsay",
           correo_electronico: "lgarcia9@bravesites.com",
           contrasena: bcrypt.hashSync("yF6`%Ltd@C6uV", 12),
@@ -150,7 +140,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           nombre: "Heath",
           correo_electronico: "hackwooda@si.edu",
           contrasena: bcrypt.hashSync("rC9%t|T%SNV?\\D", 12),
@@ -164,7 +153,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           nombre: "Renee",
           correo_electronico: "rmcblainb@hugedomains.com",
           contrasena: bcrypt.hashSync("zK5)<c,%S", 12),
@@ -178,7 +166,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           nombre: "Torie",
           correo_electronico: "tdeeveyc@blinklist.com",
           contrasena: bcrypt.hashSync('jF2(dW"u', 12),
@@ -192,7 +179,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           nombre: "Jamaal",
           correo_electronico: "jitzcovichd@goo.ne.jp",
           contrasena: bcrypt.hashSync('hZ1|"R/gI>%T', 12),
@@ -206,7 +192,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           nombre: "Petr",
           correo_electronico: "ppyatte@go.com",
           contrasena: bcrypt.hashSync("qZ7~5ss<*", 12),
