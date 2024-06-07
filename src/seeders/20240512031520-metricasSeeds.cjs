@@ -7,7 +7,6 @@ module.exports = {
       "metricas",
       [
         {
-          id: 1,
           total_postulaciones: 12,
           total_entradas: 9,
           ofertas: 16,
@@ -17,7 +16,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           total_postulaciones: 3,
           total_entradas: 19,
           ofertas: 4,
@@ -27,7 +25,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           total_postulaciones: 3,
           total_entradas: 16,
           ofertas: 16,
@@ -37,7 +34,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           total_postulaciones: 1,
           total_entradas: 16,
           ofertas: 10,
@@ -47,7 +43,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           total_postulaciones: 11,
           total_entradas: 2,
           ofertas: 13,
@@ -57,7 +52,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           total_postulaciones: 9,
           total_entradas: 20,
           ofertas: 3,
@@ -67,7 +61,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           total_postulaciones: 13,
           total_entradas: 16,
           ofertas: 9,
@@ -77,7 +70,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           total_postulaciones: 20,
           total_entradas: 3,
           ofertas: 18,
@@ -87,7 +79,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           total_postulaciones: 18,
           total_entradas: 4,
           ofertas: 13,
@@ -97,7 +88,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           total_postulaciones: 2,
           total_entradas: 15,
           ofertas: 2,
@@ -107,7 +97,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           total_postulaciones: 16,
           total_entradas: 2,
           ofertas: 4,
@@ -117,7 +106,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           total_postulaciones: 5,
           total_entradas: 10,
           ofertas: 15,
@@ -127,7 +115,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           total_postulaciones: 2,
           total_entradas: 4,
           ofertas: 16,
@@ -137,7 +124,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           total_postulaciones: 18,
           total_entradas: 8,
           ofertas: 19,
@@ -147,7 +133,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           total_postulaciones: 3,
           total_entradas: 1,
           ofertas: 19,

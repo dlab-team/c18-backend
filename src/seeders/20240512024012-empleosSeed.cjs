@@ -7,7 +7,6 @@ module.exports = {
       "empleos",
       [
         {
-          id: 1,
           titulo: "Automation Specialist III",
           empresa: "Ozu",
           cargo: "Environmental Tech",
@@ -22,7 +21,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 2,
           titulo: "Internal Auditor",
           empresa: "Meembee",
           cargo: "Librarian",
@@ -37,7 +35,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 3,
           titulo: "Software Engineer II",
           empresa: "Avamba",
           cargo: "Technical Writer",
@@ -51,7 +48,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 4,
           titulo: "VP Accounting",
           empresa: "Kwinu",
           cargo: "Geologist I",
@@ -66,7 +62,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 5,
           titulo: "Senior Quality Engineer",
           empresa: "Meejo",
           cargo: "Programmer IV",
@@ -81,7 +76,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 6,
           titulo: "Software Consultant",
           empresa: "Gabcube",
           cargo: "Help Desk Operator",
@@ -96,7 +90,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 7,
           titulo: "Programmer Analyst III",
           empresa: "Voonyx",
           cargo: "Senior Cost Accountant",
@@ -111,7 +104,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 8,
           titulo: "Chemical Engineer",
           empresa: "Tagopia",
           cargo: "Teacher",
@@ -126,7 +118,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 9,
           titulo: "Project Manager",
           empresa: "Kwilith",
           cargo: "Financial Analyst",
@@ -141,7 +132,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 10,
           titulo: "Research Associate",
           empresa: "Skimia",
           cargo: "Software Engineer I",
@@ -156,7 +146,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 11,
           titulo: "Financial Advisor",
           empresa: "Oyonder",
           cargo: "Nurse Practicioner",
@@ -171,7 +160,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 12,
           titulo: "Human Resources Manager",
           empresa: "Kazu",
           cargo: "Mechanical Systems Engineer",
@@ -186,7 +174,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 13,
           titulo: "Desktop Support Technician",
           empresa: "Livefish",
           cargo: "Executive Secretary",
@@ -201,7 +188,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 14,
           titulo: "Sales Representative",
           empresa: "Wordpedia",
           cargo: "Junior Executive",
@@ -215,7 +201,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 15,
           titulo: "Administrative Officer",
           empresa: "Mudo",
           cargo: "Environmental Tech",
@@ -230,7 +215,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 16,
           titulo: "Dental Hygienist",
           empresa: "Camimbo",
           cargo: "Programmer III",
@@ -245,7 +229,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 17,
           titulo: "Environmental Tech",
           empresa: "Yadel",
           cargo: "Operator",
@@ -259,7 +242,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 18,
           titulo: "Staff Accountant III",
           empresa: "Yamia",
           cargo: "Environmental Specialist",
@@ -273,7 +255,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 19,
           titulo: "Accountant II",
           empresa: "Riffwire",
           cargo: "Developer IV",
@@ -288,7 +269,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 20,
           titulo: "Assistant Professor",
           empresa: "Brainbox",
           cargo: "Nurse",
@@ -303,7 +283,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 21,
           titulo: "Account Coordinator",
           empresa: "Zoomlounge",
           cargo: "Desktop Support Technician",
@@ -318,7 +297,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 22,
           titulo: "Assistant Manager",
           empresa: "Ainyx",
           cargo: "Community Outreach Specialist",
@@ -332,7 +310,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 23,
           titulo: "Software Engineer II",
           empresa: "Fivechat",
           cargo: "Librarian",
@@ -346,7 +323,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 24,
           titulo: "Librarian",
           empresa: "Linkbridge",
           cargo: "Assistant Professor",
@@ -361,7 +337,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 25,
           titulo: "Community Outreach Specialist",
           empresa: "Divape",
           cargo: "Compensation Analyst",
@@ -376,7 +351,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 26,
           titulo: "Health Coach II",
           empresa: "Meetz",
           cargo: "Computer Systems Analyst I",
@@ -391,7 +365,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 27,
           titulo: "Financial Analyst",
           empresa: "Dynazzy",
           cargo: "Computer Systems Analyst IV",
@@ -405,7 +378,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 28,
           titulo: "Desktop Support Technician",
           empresa: "Yakijo",
           cargo: "Geological Engineer",
@@ -419,7 +391,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 29,
           titulo: "VP Quality Control",
           empresa: "Fadeo",
           cargo: "Administrative Assistant IV",
@@ -434,7 +405,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 30,
           titulo: "Legal Assistant",
           empresa: "Babblestorm",
           cargo: "Executive Secretary",
@@ -448,7 +418,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 31,
           titulo: "Accounting Assistant III",
           empresa: "Youfeed",
           cargo: "Systems Administrator IV",
@@ -463,7 +432,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 32,
           titulo: "Geologist IV",
           empresa: "Devbug",
           cargo: "Pharmacist",
@@ -478,7 +446,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 33,
           titulo: "Geological Engineer",
           empresa: "Realcube",
           cargo: "Internal Auditor",
@@ -493,7 +460,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 34,
           titulo: "Recruiting Manager",
           empresa: "Jabberstorm",
           cargo: "Engineer I",
@@ -508,7 +474,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 35,
           titulo: "Desktop Support Technician",
           empresa: "Geba",
           cargo: "Librarian",
@@ -523,7 +488,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 36,
           titulo: "Assistant Manager",
           empresa: "Yakitri",
           cargo: "Research Assistant II",
@@ -537,7 +501,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 37,
           titulo: "Research Assistant II",
           empresa: "Dabjam",
           cargo: "General Manager",
@@ -551,7 +514,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 38,
           titulo: "Help Desk Technician",
           empresa: "Realcube",
           cargo: "General Manager",
@@ -566,7 +528,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 39,
           titulo: "Database Administrator II",
           empresa: "Yamia",
           cargo: "Director of Sales",
@@ -580,7 +541,6 @@ module.exports = {
           updatedAt: "2024-05-11",
         },
         {
-          id: 40,
           titulo: "Analog Circuit Design manager",
           empresa: "Realblab",
           cargo: "Administrative Officer",
