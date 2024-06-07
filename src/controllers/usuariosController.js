@@ -24,6 +24,7 @@ export async function getUsuarios(req, res) {
 
 export async function postUsuarios(req, res) {
   try {
+    delete req.body.id;
     delete req.body.rol;
     const nuevoUsuario = await Usuarios.create(req.body);
     console.log(nuevoUsuario);
@@ -62,6 +63,7 @@ export async function postUsuarios(req, res) {
 }
 
 export async function getUsuariosPorId(req, res) {
+  const id = req.params.id;
   try {
     const usuario = await Usuarios.findByPk(id, {
       include: [
@@ -80,7 +82,9 @@ export async function getUsuariosPorId(req, res) {
 }
 
 export async function putUsuariosPorId(req, res) {
+  const id = req.params.id;
   try {
+    delete req.body?.id;
     const usuario = await Usuarios.findByPk(id);
     if (!usuario) {
       return res.status(404).json({ message: "Usuario no encontrado" });
@@ -93,7 +97,9 @@ export async function putUsuariosPorId(req, res) {
 }
 
 export async function deleteUsuariosPorId(req, res) {
+  const id = req.params.id;
   try {
+    delete req.body?.id;
     const usuario = await Usuarios.findByPk(id);
     if (!usuario) {
       return res.status(404).json({ message: "Usuario no encontrado" });
