@@ -53,21 +53,12 @@ export async function solicitarResetContrasena(req, res) {
 export async function resetearContrasena(req, res) {
   try {
     const { nuevaContrasena } = req.body;
-    const token = req.headers.authorization.split(" ")[1];
-    // formato token: 'Authorization: Bearer header.payload.signature'
 
-    let payload;
-    try {
-      payload = jwt.verify(token, process.env.JWT_SECRET);
-    } catch (error) {
-      return res.status(400).json({ message: "Token inválido o expirado" });
-    }
-
-    if (!payload.reset_pass) {
+    if (!req.payload.reset_pass) {
       return res.status(400).json({ message: "Token inválido" });
     }
 
-    const usuario = await Usuarios.findByPk(payload.sub);
+    const usuario = await Usuarios.findByPk(req.payload.sub);
     if (!usuario) {
       return res.status(404).json({ message: "Usuario no encontrado" });
     }
