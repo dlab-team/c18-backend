@@ -45,13 +45,4 @@ export const Metas = sequelize.define("metas", {
       },
     },
   },
-  usuario_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    validate: {
-      isInt: {
-        msg: "El ID de usuario debe ser un número entero.",
-      },
-    },
-  },
 });

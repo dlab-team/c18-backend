@@ -5,6 +5,7 @@ import { sequelize } from "../database/database.js";
 import { Metas } from "./Metas.js";
 import { Metricas } from "./Metricas.js";
 import { RegistroEntrevistas } from "./RegistroEntrevistas.js";
+import { UsuariosMetas } from "./UsuariosMetas.js";
 
 export const Usuarios = sequelize.define(
   "usuarios",
@@ -111,19 +112,19 @@ Metricas.belongsTo(Usuarios, {
   },
 });
 
-// Relacion 1 a 1 Usuarios - MetasSemanalesAplicaciones
+// Relacion muchos a muchos - MetasSemanalesAplicaciones
 
-Usuarios.hasOne(Metas, {
-  foreignKey: {
-    name: "usuario_id",
-  },
+Usuarios.belongsToMany(Metas, {
+  through: UsuariosMetas,
+  foreignKey: "usuario_id",
+  otherKey: "meta_id",
+});
+Metas.belongsToMany(Usuarios, {
+  through: UsuariosMetas,
+  foreignKey: "meta_id",
+  otherKey: "usuario_id",
 });
 
-Metas.belongsTo(Usuarios, {
-  foreignKey: {
-    name: "usuario_id",
-  },
-});
 // Relacion 1 a muchos Usuarios - InterviewRecord
 
 Usuarios.hasMany(RegistroEntrevistas, {
