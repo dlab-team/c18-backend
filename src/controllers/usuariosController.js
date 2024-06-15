@@ -6,12 +6,16 @@ import { Usuarios } from "../models/Usuarios.js";
 import { Metas } from "../models/Metas.js";
 import { Metricas } from "../models/Metricas.js";
 import { RegistroEntrevistas } from "../models/RegistroEntrevistas.js";
+import { UsuariosMetas } from "../models/UsuariosMetas.js";
 
 export async function getUsuarios(req, res) {
   try {
     const usuarios = await Usuarios.findAll({
       include: [
-        { model: Metas },
+        {
+          model: Metas,
+          through: { model: UsuariosMetas },
+        },
         { model: Metricas },
         { model: RegistroEntrevistas },
       ],
@@ -67,7 +71,10 @@ export async function getUsuariosPorId(req, res) {
   try {
     const usuario = await Usuarios.findByPk(id, {
       include: [
-        { model: Metas },
+        {
+          model: Metas,
+          through: { model: UsuariosMetas },
+        },
         { model: Metricas },
         { model: RegistroEntrevistas },
       ],
