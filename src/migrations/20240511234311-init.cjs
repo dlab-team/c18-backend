@@ -185,14 +185,6 @@ module.exports = {
           },
         },
       },
-      usuario_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: "usuarios",
-          key: "id",
-        },
-      },
       createdAt: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
@@ -202,6 +194,24 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
         allowNull: false,
+      },
+    });
+    await queryInterface.createTable("usuariosmetas", {
+      usuario_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "usuarios",
+          key: "id",
+        },
+      },
+      meta_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "metas",
+          key: "id",
+        },
       },
     });
     await queryInterface.createTable("registroEntrevistas", {
